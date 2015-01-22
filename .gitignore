@@ -4,3 +4,8 @@ _site
 
 # Ignore the config file that's used for gh-pages.
 _config.gh-pages.yml
+
+# Ignore deploy stuff
+secret.json
+node_modules/
+

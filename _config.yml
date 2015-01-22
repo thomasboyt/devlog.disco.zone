@@ -2,7 +2,7 @@
 title:       devlog
 description: "dev log for games"
 baseurl:     ""
-url:         "http://blerg.disco.zone"
+url:         "http://devlog.disco.zone"
 
 # Google analytics
 google_analytics:
@@ -31,3 +31,6 @@ flattr_button:
 markdown: kramdown
 permalink: /:year/:month/:day/:title/
 paginate: 10
+
+# Deploy stuff
+exclude: ['node_modules/', 'Gruntfile.json', 'secret.json', 'package.json']
