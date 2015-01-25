@@ -1,5 +1,5 @@
 # Site settings
-title:       devlog
+title:       "disco.zone devlog"
 description: "dev log for games"
 baseurl:     ""
 url:         "http://devlog.disco.zone"
