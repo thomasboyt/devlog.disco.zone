@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     },
 
     exec: {
-      build: 'jekyll b'
+      build: 'bundle exec jekyll build'
     }
 
   });
