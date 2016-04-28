@@ -1,12 +1,30 @@
+// center post headers
 .post-header {
   text-align: center;
 }
 
+// larger line-heights for better legibility
 p, li {
   line-height: 1.8;
 }
 
+// remove underline from links
 .post-content a {
   background-image: none;
   text-shadow: none;
+}
+
+// center images
+.post-content img {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+// center iframes (quickcast)
+iframe[name="quickcast"] {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  display: block;
 }
