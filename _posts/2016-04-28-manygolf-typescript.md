@@ -1,8 +1,8 @@
 ---
 layout:     post
-title:      Manygolf and TypeScript (Part 1: Build Pipeline)
+title:      "Manygolf and TypeScript (Part 1: Build Pipeline)"
 categories: manygolf
-summary:    A summary of the long and arduous road to setting up a TypeScript + Babel + Webpack build system.
+summary:    "A summary of the long and arduous road to setting up a TypeScript + Babel + Webpack build system."
 ---
 
 As I detailed in [my last post]({% post_url 2016-04-18-manygolf %}), I chose to build my newest project, [Manygolf](http://manygolf.disco.zone), using [TypeScript](http://www.typescriptlang.org/). TypeScript, if you're not familiar, is a superset of JavaScript that includes static typing, developed at Microsoft.
