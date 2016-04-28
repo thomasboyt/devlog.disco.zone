@@ -29,6 +29,8 @@ flattr_button:
 
 # Build settings
 markdown: kramdown
+kramdown:
+  input: GFM
 permalink: /:year/:month/:day/:title/
 paginate: 10
 
