@@ -101,8 +101,7 @@ text:
 markdown:     kramdown
 kramdown:
   input: GFM
-redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
+  smart_quotes:  ["apos", "apos", "ldquo", "rdquo"]
 permalink: /:year/:month/:day/:title/
 paginate: 10
 sass:
