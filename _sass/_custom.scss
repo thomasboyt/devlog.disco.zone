@@ -22,9 +22,15 @@ p, li {
 }
 
 // center iframes (quickcast)
-iframe[name="quickcast"] {
+iframe {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1rem;
   display: block;
+}
+
+iframe.canvas-demo {
+  overflow: hidden;
+  border: 0;
+  padding: 0;
 }
