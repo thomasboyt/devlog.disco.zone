@@ -5,9 +5,9 @@ categories: canvas
 summary:    "A problem that's way harder than it should be!"
 ---
 
-Scaling the HTML canvas element is a surprisingly tricky task. There's a few different ways to do it, with various performance implications, and with various browser support.
+Scaling the HTML canvas element is a surprisingly tricky task. There's a few different ways to do it, and browser support of all the different methods is far from universal.
 
-Here's our completely unscaled, tiny little 80x60 canvas. It has some text rendered with `fillText()`, a sprite rendered with `drawImage()`, and a circle rendered with `arc()` and `stroke()`:
+Here's a completely unscaled, tiny little 80x60 canvas. It has some text rendered with `fillText()`, a sprite rendered with `drawImage()`, and a circle rendered with `arc()` and `stroke()`:
 
 <iframe scrolling="no" class="canvas-demo" src="/resources/canvas-scaling/unscaled.html" width="80" height="64"></iframe>
 
@@ -30,7 +30,7 @@ As you can see, this isn't ideal for any of our rendering use cases. Not only ar
 
 ### Scaling with CSS with nearest-neighbor image scaling
 
-While we can't do anything about our rendered text and shapes with just CSS, we actually *can* drastically improve the scaling of our image. Pixelated graphics, like our little player character, are usually scaled using a *nearest-neighbor* algorithm.
+While we can't significantly improve the rendering of our text and shapes with just CSS, we actually *can* drastically improve the scaling of our image. Pixelated graphics, like our little player character, are usually scaled using a *nearest-neighbor* algorithm.
 
 Thankfully, we can fix this by applying a few different CSS rules, for different browsers:
 
@@ -46,7 +46,7 @@ canvas {
 
 In addition to a crisp player sprite, the text and circle are significantly less blurry. This may be all you need for your game, depending on the kind of rendering you're doing. If you're using sprites for everything, or desire a "pixelated" look for your scaled primitives, this is a pretty good option.
 
-Unfortunately, as you might have gathered from the CSS rules above, Internet Explorer/Edge do not support this property yet (nor is it [high on their priority list](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/imagerendering)). So it's not a very good cross-browser option, unfortunately.
+Unfortunately, as you might have gathered from the CSS rules above, Internet Explorer/Edge do not support this property yet (nor is it [high on their priority list](https://developer.microsoft.com/en-us/microsoft-edge/platform/status/imagerendering)). But if you want properly-scaled images across different browsers, read on!
 
 ## Scaling the canvas context
 
@@ -161,4 +161,4 @@ ctx.scale(scale * pixelRatio, scale * pixelRatio);
 
 ## Conclusion
 
-So that's canvas scaling. It's complicated! And hard! And unfortunately involves lots of JavaScript. And these are the simple cases - if you want to have a dynamically-sized canvas, things get a lot trickier (you're gonna need a resize handler on browser windows, for one thing). I've been working on some abstractions for it that I hope to share soon.
+So that's canvas scaling. It's complicated! And hard! And unfortunately involves lots of JavaScript. And these are the simple cases - if you want to have a dynamically-sized canvas, things get a lot trickier (you're gonna need a resize handler on browser windows, for one thing). But, hopefully, this is enough to get you started.
